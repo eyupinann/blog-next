@@ -35,8 +35,6 @@ C
 utils/api.tsx,2/4/24f5520015c888149812f449bb05f808a3dac834
 C
 data/headerData.tsx,d/6/d67a63b3e228d2b399f96629ed08f8cf2a9dafef
-V
-&components/molecules/card/PostCard.tsx,a/5/a5d86941c1065b38a35ebbf8941295bb32daf985
 ^
 .components/molecules/newsletter/NewsLetter.tsx,a/e/ae0db19befaf2eac88cc2b3a33d7b227ba9072a4
 ]

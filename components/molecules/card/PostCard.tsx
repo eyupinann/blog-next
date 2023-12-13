@@ -9,13 +9,21 @@ import React from 'react'
  * @returns React component that can be easily integrated into any web application.
  */
 
-const PostCard = (props) => {
+interface BannerData {
+   _id: any;
+   image: any;
+   content: string;
+   title: string;
+}
+
+const PostCard: React.FC<{ data: BannerData }> = ({ data }) => {
+   console.log(data)
 
    return (
       <div className="card w-fit p-4 border border-base-content/10 rounded-xl font-work">
          <figure>
             <img
-               src={props.data.image}
+               src={data.image}
                alt="email"
                className={`rounded-xl`}
                width={360}
@@ -24,15 +32,15 @@ const PostCard = (props) => {
          </figure>
          <div className="card-body py-6 px-2">
             <span className="btn no-animation hover:bg-primary hover:text-primary-content bg-primary/5 border-0 text-primary text-sm px-3 py-2 min-h-fit h-fit rounded-md w-fit capitalize font-medium">
-                {props.data.content}
+                {data.content}
             </span>
             <h3>
                <Link
                    href="/single-post/[postId]"
-                   as={`/single-post/${props.data._id}`}
+                   as={`/single-post/${data._id}`}
                    className="text-base-content hover:text-primary transition-all duration-300 ease-in-out font-semibold text-lg md:text-xl lg:text-2xl mt-2"
                >
-                  {props.data.title}
+                  {data.title}
                </Link>
             </h3>
             <div className="mt-5 flex items-center gap-5 text-base-content/60 ">
