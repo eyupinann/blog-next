@@ -9,10 +9,8 @@ import React from 'react'
  * @returns React component that can be easily integrated into any web application.
  */
 interface BannerData {
-   // Gerekli özellikleri ekleyin
    title: string;
    imageUrl: string;
-   // Diğer özellikleri buraya ekleyin
 }
 
 const BannerCard: React.FC<{ data: BannerData }> = ({ data }) => {
