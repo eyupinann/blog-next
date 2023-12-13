@@ -8,9 +8,17 @@ import React from 'react'
  *
  * @returns React component that can be easily integrated into any web application.
  */
+interface BannerData {
+   // Gerekli özellikleri ekleyin
+   title: string;
+   imageUrl: string;
+   // Diğer özellikleri buraya ekleyin
+}
 
-const BannerCard = ({ data }) => {
-   return (
+const BannerCard: React.FC<{ data: BannerData }> = ({ data }) => {
+
+
+return (
       <div className="relative rounded-xl font-work mb-24">
          <img
             width="1216"
@@ -28,7 +36,10 @@ const BannerCard = ({ data }) => {
                   href="/"
                   className="text-base-content font-semibold text-xl md:text-2xl lg:text-4xl leading-5 md:leading-10 hover:text-primary transition-all hover:duration-500"
                >
-                  {data?.title}
+                  {data && (
+                      <h1>      {data.title}</h1>
+                    )}
+
                </Link>
             </h3>
             <div className="mt-6 flex items-center gap-5">
